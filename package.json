@@ -1,0 +1,19 @@
+{
+  "name": "Jogo do Humor",
+  "version": "1.0.0",
+  "description": "\"Esse é um Jogo do Humor\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SraSidle/Jogo-do-Humor_P01_Mod02.git"
+  },
+  "author": "Bianca Aguiar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SraSidle/Jogo-do-Humor_P01_Mod02/issues"
+  },
+  "homepage": "https://github.com/SraSidle/Jogo-do-Humor_P01_Mod02#readme"
+}
