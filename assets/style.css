@@ -1,120 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-    font-family: roboto , "Times New Roman" , serif , "Updock";
-    padding: 0;
-    margin: 0;
-    align-items: center;
+  font-family: roboto, "Times New Roman", serif, "Updock";
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
-header{
-    background-color: black;    
-}
-
-header img{   
-  width: 100%;
-  height: 14rem;
-}
-
-header h1{
-    text-align: center;
-    background-color: #E6A917;
-    border-bottom-style: solid;
-    border-bottom-width: 4px; 
-    font-size: 2rem;
-    color: black;
-}
-
-body{
-    width: 100%;
-    background-color: hsl(285, 100%, 30%); 
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
-    display: flex; 
-    text-align: center; 
-    margin: 6rem 0 8rem 1rem;
-    padding: 1rem;
-    justify-content: center;
-    flex-direction: row;}
-
-div#imagems{
-    display: flex; 
-    height: 14rem;
-    width: 13rem;
-    margin-left: 1.5rem;
-    box-shadow: 7px 7px 7px 7px #00000040;
-align-content: center;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: flex-end;
-align-items: stretch;
-} 
-
-div#texto{
-    height: 12rem;
-    width: 18rem;
-    text-align: center;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   align-content: center;
-   justify-content: center;
-   align-items: baseline;}
-
-div#texto h2{
-    margin: 1rem;
-     font-family: Roboto;
-     font-size: 2rem;
-    color: #a5e624cb;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000;
+  width: 100%;
 }
 
-div#texto h3{
-    margin: 1rem;
-    font-family: Roboto;
-    font-size:2rem;
-    color: #E6A917;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000;
+.background_all {
+  width: auto;
+  min-height: 70vh;
+  height: auto;
+  background-color: #952d95;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-button {  
-    font-size: 1.5rem;
-    font-weight: 750;
-    padding: 1rem;
-    color: black;
-   background-color: #a5e624cb;
-   border-radius: 40px 40px 40px 40px;
-   box-shadow: 5px 5px 5px 5px #00000030;
-   border: solid 2.5px black;
-  
+.section_main {
+  width: 500px;
+  height: 300px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 2px #0000002e;
 }
 
-button{
-  transition: transform 0.5s ease-in-out; 
+header {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(#807e06, #9e9c23, #807e06);
+  color: white;
 }
 
-button:hover{
-    font-weight: 1000;
-    background-color: #E6A917;
-    box-shadow: 7px 7px 7px 7px #00000040;
-    transform: scale(1.02);
-    color: black;}
+/* background-image: linear-gradient(
+    rgb(19, 164, 169),
+    rgb(55, 179, 183),
+    rgb(19, 164, 169)
+  );  */
 
-footer{
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.1rem;
-    color: black;
-    background-color: #a5e624cb;
+header > button {
+  background-color: #00000010;
+  color: rgb(208, 208, 208);
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 2px 3px 1px #00000020;
+  cursor: pointer;
 }
 
-footer a:hover{
-   color: #740099;
-   transform: scale (1.2);
+h1,
+#name_character {
+  color: black;
+  margin-bottom: 1.5rem;
 }
 
+.jogo_rochele {
+  background-color: #800080;
+  display: flex;
+}
 
+.images {
+  width: 250px;
+}
 
+#img_rochele {
+  width: 200px;
+}
+
+.textual_content {
+  width: 150px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+span {
+  color: white;
+}
+
+p {
+  color: rgb(208, 208, 208);
+}
+
+.change {
+  border: none;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.change_1 {
+  background-color: #807e06;
+}
+
+.change_2 {
+  background-color: #067080;
+}
+
+.jogo_julius {
+  background-color: #378000;
+  display: none;
+}
+
+#img_julius {
+  width: 250px;
+  height: 230px;
+}
+
+footer {
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  background-image: linear-gradient(#807e06, #9e9c23, #807e06);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .section_main {
+    width: 300px;
+    height: 320px;
+    padding: 2rem 0;
+    flex-direction: column;
+  }
+
+  h1,
+  #name_character {
+    font-size: small;
+  }
+
+  .images {
+    width: 230px;
+    height: 230px;
+  }
+
+  #img_rochele {
+    width: 180px;
+  }
+
+  .textual_content {
+    height: 120px;
+  }
+}
+
+@media (max-width: 350px) {
+  .section_main {
+    width: calc(100% - 30px);
+    height: 320px;
+    padding: 1rem 0;
+    flex-direction: column;
+  }
+
+  .images {
+    width: 200px;
+  }
+  #img_rochele {
+    width: 200px;
+  }
+}

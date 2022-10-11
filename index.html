@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 
-<html lang = "pt-Br">
-
-<head>
-    <meta charset = "UTF-8">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel = "stylesheet" href = "./assets/style.css">
-    <title> Jogo Do Humor </title>
-</head>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Jogo Do Humor</title>
+  </head>
 
-   <body>
+  <body>
+    <header>
+      <button class="button_rochele">Rochele</button>
+      <button class="button_julius">Julius</button>
+      <button class="button_chris">Chris</button>
+    </header>
 
-         <header>
-            <img src = "./assets/imagens/cabeçalho.jpg" alt = "banner Rochelle">
-            <h1> Jogo do Humor da Rochelle </h1>
-         </header> 
-         
-         <main> 
+    <main>
+      <!-- <img class="img__banner" src = "./assets/imagens/cabeçalho.jpg" alt = "banner Rochelle"> -->
+      <div class="background_all">
+        <h1>Jogo do Humor <span id="name_character">da Rochelle</span></h1>
+        <section class="jogo_rochele section_main">
+          <div class="images">
+            <img
+              id="img_rochele"
+              class="single_image"
+              src="./assets/imagens/Rochelle.gif"
+              alt="Gif do Humor Atual"
+            />
+          </div>
 
-            <div id = "imagems">
-                <img id = "imagem" src = "./assets/imagens/Rochelle.gif" alt = "Gif do Humor Atual">        
-            </div>
+          <div class="textual_content">
+            <p class="situation_1">
+              Situação: <br />
+              <span id="situation" alt="Situação"> Mãe Rochelle </span>
+            </p>
+            <p class="humor_1">
+              Humor: <br />
+              <span id="humor"> Pistola </span>
+            </p>
+            <button class="change_1 change" value="um">
+              <em> Alterar Humor </em>
+            </button>
+          </div>
+        </section>
 
-            <div id = "texto">
-                <h2> Situação: <span id = nome  alt="Situação"> Rochelle </span> </h2>         
-                <h3> Humor:  <span id = "estado"> Pistola </span> </h3>              
-                <button class = "mudar" value = "um"> 
-                  <em> Alterar Humor </em> </button>       
-            </div>
-     
-         </main>
+        <section class="jogo_julius section_main">
+          <div class="images">
+            <img
+              id="img_julius"
+              class="single_image"
+              src="./assets/img_julius/J_sincero.gif"
+              alt="image do humor atual do Julius"
+            />
+          </div>
 
-     <footer>
-        <a href ="https://github.com/SraSidle"  target = "_blank"> @Sra_Sidle &COPY;;</a>
-     </footer>
- 
-     <script src = "./assets/script.js"></script>
+          <div class="textual_content">
+            <p class="situationJ_1">
+              Situação: <br />
+              <span id="situationJ"> Julius </span>
+            </p>
+            <p class="humorJ_1">
+              Humor: <br />
+              <span id="humorJ"> Sincero </span>
+            </p>
+            <button class="change_2 change" value="umJ">Alterar Humor</button>
+          </div>
+        </section>
+      </div>
+    </main>
 
-   </body>
+    <footer>
+      <p> Desenvolvidor por: <a href="https://github.com/SraSidle" target="_blank">
+        @Sra_Sidle &COPY;;</a
+      ></p>
+    </footer>
 
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
