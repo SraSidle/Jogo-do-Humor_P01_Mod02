@@ -11,35 +11,63 @@
 
   <body>
     <header>
-      <button class="button_rochele">Rochele</button>
-      <button class="button_julius">Julius</button>
-      <button class="button_chris">Chris</button>
+      <button class="btn_serie">
+        <img src="./assets/images/Logo_da_Serie.webp" width="200px" />
+      </button>
+      <button class="btn_chris">Chris</button>
+      <button class="btn_rochelle">Rochelle</button>
+      <button class="btn_julius">Julius</button>
+      <button class="btn_drew">Drew</button>
+      <button class="btn_tonya">Tonya</button>
     </header>
 
     <main>
       <!-- <img class="img__banner" src = "./assets/imagens/cabeçalho.jpg" alt = "banner Rochelle"> -->
       <div class="background_all">
-        <h1>Jogo do Humor <span id="name_character">da Rochelle</span></h1>
-        <section class="jogo_rochele section_main">
+        <h1>Jogo do Humor <span id="name_character">do Chris</span></h1>
+
+        <section class="jogo_chris section_main">
           <div class="images">
             <img
-              id="img_rochele"
+              id="img_chris"
               class="single_image"
-              src="./assets/imagens/Rochelle.gif"
-              alt="Gif do Humor Atual"
+              src="./assets/images/imgsChris/chrisPolitico.gif"
+              alt="imagem do humor atual do Chris"
             />
           </div>
 
           <div class="textual_content">
-            <p class="situation_1">
-              Situação: <br />
-              <span id="situation" alt="Situação"> Mãe Rochelle </span>
+            <p class="situationC">Situação:
+
+              <span id="situationC"> Eleições </span>
             </p>
-            <p class="humor_1">
-              Humor: <br />
-              <span id="humor"> Pistola </span>
+            <p class="humorC">Humor:
+              <span id="humorC"> Discursivo </span>
             </p>
-            <button class="change_1 change" value="um">
+            <button class="change1 change" value="umC">Alterar Humor</button>
+          </div>
+        </section>
+
+        <section class="jogo_rochelle section_main">
+          <div class="images">
+            <img
+              id="img_rochelle"
+              class="single_image"
+              src="./assets/images/imgsRochelle/Rochelle.gif"
+              alt="Gif do Humor Atual da Rochelle"
+            />
+          </div>
+
+          <div class="textual_content">
+            <p class="situationR">
+              Situação:
+              <span id="situationR" alt="Situação"> Mãe Rochelle </span>
+            </p>
+            <p class="humorR">
+              Humor:
+              <span id="humorR"> Pistola </span>
+            </p>
+            <button class="change2 change" value="um">
               <em> Alterar Humor </em>
             </button>
           </div>
@@ -50,30 +78,79 @@
             <img
               id="img_julius"
               class="single_image"
-              src="./assets/img_julius/J_sincero.gif"
+              src="./assets/images/imgsJulius/J_sincero.gif"
               alt="image do humor atual do Julius"
             />
           </div>
 
           <div class="textual_content">
-            <p class="situationJ_1">
-              Situação: <br />
-              <span id="situationJ"> Julius </span>
+            <p class="situationJ">
+              Situação:
+              <span id="situationJ"> Marido Julius </span>
             </p>
             <p class="humorJ_1">
-              Humor: <br />
+              Humor:
               <span id="humorJ"> Sincero </span>
             </p>
-            <button class="change_2 change" value="umJ">Alterar Humor</button>
+            <button class="change3 change" value="umJ">Alterar Humor</button>
+          </div>
+        </section>
+
+        <section class="jogo_drew section_main">
+          <div class="images">
+            <img
+              id="img_drew"
+              class="single_image"
+              src="./assets/images/imgsDrew/drewSorrindo.gif"
+              alt="imagem do humor atual do Drew"
+            />
+          </div>
+
+          <div class="textual_content">
+            <p class="situationD">
+              Situação:
+              <span id="situationD">Piada de Natal</span>
+            </p>
+            <p class="humorD">
+              Humor:
+              <span id="humorD">Morrendo de rir</span>
+            </p>
+            <button class="change4 change" value="umD">Alterar Humor</button>
+          </div>
+        </section>
+
+        <section class="jogo_tonya section_main">
+          <div class="images">
+            <img
+              id="img_tonya"
+              class="single_image"
+              src="./assets/images/imgsTonya/tonyaNao.gif"
+              alt="imagem do humor atual da Tonya"
+            />
+          </div>
+
+          <div class="textual_content">
+            <p class="situationT">
+              Situação:
+              <span id="situationT">Comer</span>
+            </p>
+            <p class="humorT">
+              Humor:
+              <span id="humorT">Não gosto</span>
+            </p>
+            <button class="change5 change" value="umT">Alterar Humor</button>
           </div>
         </section>
       </div>
     </main>
 
     <footer>
-      <p> Desenvolvidor por: <a href="https://github.com/SraSidle" target="_blank">
-        @Sra_Sidle &COPY;;</a
-      ></p>
+      <p>
+        Desenvolvido por:
+        <a href="https://github.com/SraSidle" target="_blank">
+          @Sra_Sidle &COPY;;</a
+        >
+      </p>
     </footer>
 
     <script src="./assets/script.js"></script>
