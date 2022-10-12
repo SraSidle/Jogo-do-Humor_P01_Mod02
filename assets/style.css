@@ -21,10 +21,9 @@ main {
 
 .background_all {
   width: auto;
-  min-height: 70vh;
   height: auto;
-  background-color: #952d95;
-  padding: 1rem;
+  padding: 4rem 0;
+  background-color: #C4DD68;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,31 +35,24 @@ main {
   height: 300px;
   display: none;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 1rem;
   box-shadow: 2px 2px 5px 2px #0000002e;
 }
 
 header {
-  height: 15vh;
+  height: 7rem;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(#807e06, #9e9c23, #807e06);
-  color: white;
+  background-image: linear-gradient(#2770d7, #3478d6, #2770d7);
 }
-
-/* background-image: linear-gradient(
-    rgb(19, 164, 169),
-    rgb(55, 179, 183),
-    rgb(19, 164, 169)
-  );  */
 
 header > button {
   background-color: #00000010;
-  color: rgb(208, 208, 208);
+  color: rgb(217, 220, 43);
   font-weight: 500;
   padding: 0.5rem;
   border-radius: 3px;
@@ -71,72 +63,104 @@ header > button {
 
 h1,
 #name_character {
-  color: black;
   margin-bottom: 1.5rem;
 }
 
-.jogo_rochele {
-  background-color: #800080;
-  display: flex;
-}
-
 .images {
-  width: 250px;
-}
-
-#img_rochele {
-  width: 200px;
+  width: auto;
+  height: auto;
 }
 
 .textual_content {
-  width: 150px;
+  width: 250px;
   height: 180px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
-span {
-  color: white;
+.change {
+  width: 8rem;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-color: #2770d7;
+  color: rgb(217, 220, 43);
+  font-weight: 500;
+}
+
+.jogo_chris {
+  background-color: #8c9e06;
+  display: flex;
+}
+
+#img_chris {
+  width: 12rem;
+  height: auto;
+}
+
+.jogo_rochelle {
+  background-color: #800080;
+  display: none;
+}
+
+#img_rochelle {
+  width: 12rem;
+  height: auto;
 }
 
 p {
   color: rgb(208, 208, 208);
 }
 
-.change {
-  border: none;
-  padding: 0.7rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-.change_1 {
-  background-color: #807e06;
-}
-
-.change_2 {
-  background-color: #067080;
-}
-
 .jogo_julius {
-  background-color: #378000;
+  background-color: #059e97;
   display: none;
 }
 
 #img_julius {
   width: 250px;
-  height: 230px;
+  height: 200px;
+  padding: 1rem;
+}
+
+.jogo_drew {
+  background-color: #70b600;
+}
+
+#img_drew {
+  width: 250px;
+  height: 200px;
+  padding: 1rem;
+}
+
+.jogo_tonya {
+  background-color: #96084f;
+}
+
+#img_tonya {
+  width: 250px;
+  height: auto;
+  padding: 1rem;
 }
 
 footer {
   width: 100%;
-  height: 15vh;
+  height: 5rem;
   text-align: center;
-  background-image: linear-gradient(#807e06, #9e9c23, #807e06);
+  color:rgb(217, 220, 43);
+  background-image: linear-gradient(#2770d7, #276ed2, #2770d7);
 }
 
 a {
   text-decoration: none;
+  color: rgb(217, 220, 43);
+}
+
+a:hover{
+  color: white;
 }
 
 @media (max-width: 650px) {
@@ -157,11 +181,22 @@ a {
     height: 230px;
   }
 
-  #img_rochele {
+  #img_rochelle {
     width: 180px;
+    height: 180px;
+  }
+
+  #img_julius {
+    width: 200px;
+    height: 180px;
+  }
+
+  #img_tonya {
+    width: 200px;
   }
 
   .textual_content {
+    width: 100%;
     height: 120px;
   }
 }
@@ -172,12 +207,22 @@ a {
     height: 320px;
     padding: 1rem 0;
     flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #img_chris {
+    height: 8rem;
+  }
+
+  #img_tonya {
+    width: 175px;
   }
 
   .images {
     width: 200px;
+    height: 160px;
   }
-  #img_rochele {
+  #img_rochelle {
     width: 200px;
   }
 }
