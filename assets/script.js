@@ -3,22 +3,46 @@ const background = document.querySelector(".background_all");
 let namePersonagem = document.getElementById("name_character");
 
 //section header
-const buttonJulius = document.querySelector(".button_julius");
-const buttonRochele = document.querySelector(".button_rochele");
+const btnChris = document.querySelector(".btn_chris")
+const btnRochelle = document.querySelector(".btn_rochelle");
+const btnJulius = document.querySelector(".btn_julius");
+const btnDrew = document.querySelector(".btn_drew");
+const btnTonya = document.querySelector(".btn_tonya");
+
+//section Chris
+const sectionChris = document.querySelector(".jogo_chris");
+const situationC = document.getElementById("situationC");
+const humorC = document.getElementById("humorC");
+const imgC = document.getElementById("img_chris");
+let btnChangeC = document.querySelector(".change1")
 
 //section Rochele
-const sectionRochelle = document.querySelector(".jogo_rochele");
-const situationR = document.getElementById("situation");
-const humorR = document.getElementById("humor");
-const imgR = document.querySelector("#img_rochele");
-let botao = document.querySelector(".change_1");
+const sectionRochelle = document.querySelector(".jogo_rochelle");
+const situationR = document.getElementById("situationR");
+const humorR = document.getElementById("humorR");
+const imgR = document.getElementById("img_rochelle");
+let btnChangeR = document.querySelector(".change2");
 
 //section Julius
 const sectionJulius = document.querySelector(".jogo_julius");
 const situationJ = document.querySelector("#situationJ");
-const humorJ = document.querySelector("#humorJ");
-const imgJ = document.querySelector("#img_julius");
-let btnChangeJ = document.querySelector(".change_2");
+const humorJ = document.getElementById("humorJ");
+const imgJ = document.getElementById("img_julius");
+let btnChangeJ = document.querySelector(".change3");
+
+//section Drew
+const sectionDrew = document.querySelector(".jogo_drew");
+const situationD = document.getElementById("situationD");
+const humorD = document.getElementById("humorD");
+const imgD = document.getElementById("img_drew");
+let btnChangeD = document.querySelector(".change4")
+
+//section Tonya
+const sectionTonya = document.querySelector(".jogo_tonya");
+const situationT = document.getElementById("situationT");
+const humorT = document.getElementById("humorT");
+const imgT = document.getElementById("img_tonya");
+let btnChangeT = document.querySelector(".change5")
 
 //header => troca de display e background
 
@@ -31,16 +55,49 @@ function changeName_Back(name, colorB) {
   background.style.background = colorB;
 }
 
-buttonJulius.addEventListener("click", () => {
-  changeDisplay(sectionJulius, "flex");
-  changeName_Back("do Julius", "#5A952D");
+btnChris.addEventListener("click", () => {
+  changeDisplay(sectionChris, "flex");
+  changeName_Back("do Chris", "#C4DD68");
   changeDisplay(sectionRochelle, "none");
-});
+  changeDisplay(sectionJulius, "none");
+  changeDisplay(sectionDrew, "none");
+  changeDisplay(sectionTonya, "none");
+})
 
-buttonRochele.addEventListener("click", () => {
+btnRochelle.addEventListener("click", () => {
   changeDisplay(sectionRochelle, "flex");
   changeName_Back("da Rochelle", "#952d95");
+  changeDisplay(sectionChris, "none");
   changeDisplay(sectionJulius, "none");
+  changeDisplay(sectionDrew, "none");
+  changeDisplay(sectionTonya, "none");
+});
+
+btnJulius.addEventListener("click", () => {
+  changeDisplay(sectionJulius, "flex");
+  changeName_Back("do Julius", "#3AAEA8");
+  changeDisplay(sectionChris, "none");
+  changeDisplay(sectionRochelle, "none");
+  changeDisplay(sectionDrew, "none");
+  changeDisplay(sectionTonya, "none");
+});
+
+btnDrew.addEventListener("click", () => {
+  changeDisplay(sectionDrew, "flex");
+  changeName_Back("do Drew", "#8DC13A");
+  changeDisplay(sectionChris, "none");
+  changeDisplay(sectionRochelle, "none");
+  changeDisplay(sectionJulius, "none");
+  changeDisplay(sectionTonya, "none");
+});
+
+btnTonya.addEventListener("click", () => {
+  changeDisplay(sectionTonya, "flex");
+  changeName_Back("da Tonya", "#A83B71");
+  changeDisplay(sectionChris, "none");
+  changeDisplay(sectionRochelle, "none");
+  changeDisplay(sectionJulius, "none");
+  changeDisplay(sectionDrew, "none");
 });
 
 //body => troca de humor
@@ -59,30 +116,79 @@ function changeDOM(
   img.src = newImg;
   btnValue.value = newBtnValue;
 }
+//Chris
+btnChangeC.addEventListener("click", () => {
+  if(btnChangeC.value == "umC") {
+    changeDOM(situationC, "Chris Estatudante", humorC, "Confuso", imgC, "./assets/images/imgsChris/chrisConfuso.gif", btnChangeC, "doisC");
+  } else if(btnChangeC.value == "doisC") {
+    changeDOM(situationC, "", humorC, "", imgC, "./assets/images/imgsChris/chrisDancinha.jpg", btnChangeC, "tresC");
+  } else if(btnChangeC.value == "tresC") {
+    changeDOM(situationC, "Chris Maneiro", humorC, "Descolado", imgC, "./assets/images/imgsChris/chrisDescolado.gif", btnChangeC, "quatroC");
+  } else if(btnChangeC.value == "quatroC") {
+    changeDOM(situationC, "Chris Filho", humorC, "Incrédulo", imgC, "./assets/images/imgsChris/chrisIncredulo.gif", btnChangeC, "cincoC");
+  } else if(btnChangeC.value == "cincoC") {
+    changeDOM(situationC, "Chris DJ", humorC, "Botando pra Quebrar", imgC, "./assets/images/imgsChris/chrisMusical.webp", btnChangeC, "seisC");
+  } else if(btnChangeC.value == "seisC") {
+    changeDOM(situationC, "Eleições 2022", humorC, "Desespero", imgC, "./assets/images/imgsChris/chrisSurtado.gif", btnChangeC, "seteC");
+  } else if(btnChangeC.value == "seteC") {
+    changeDOM(situationC, "Eleições estudandis", humorC, "Político", imgC, "./assets/images/imgsChris/chrisPolitico.gif", btnChangeC, "umC");
+  }
+})
 
-//Rochele
-botao.addEventListener("click", () => {
-  if (botao.value == "um") {
-    changeDOM(situationR, "Esposa", humorR, "Surtada", imgR, "./assets/imagens/RochelleSurtada.gif", botao, "dois")
-  } else if (botao.value == "dois") {
-    changeDOM(situationR, "Modelo", humorR, "Soberba", imgR, "./assets/imagens/modeloRochelle.gif", botao, "três")
-  } else if (botao.value == "três") {
-    changeDOM(situationR, "Cozinheira", humorR, "Estressada", imgR, "./assets/imagens/DonadecasaRoche.gif", botao, "quatro")
-  } else if (botao.value == "quatro") {
-    changeDOM(situationR, "Motorista", humorR, "Veloz e Furiosa", imgR, "./assets/imagens/RocheleDirigindo.jpg", botao, "cinco")
-  } else if (botao.value == "cinco") {
-    changeDOM(situationR, "Irmã Rochele", humorR, "Competitiva", imgR, "./assets/imagens/IrmaRochelle.gif", botao, "seis")
+//Rochelle
+btnChangeR.addEventListener("click", () => {
+  if (btnChangeR.value == "um") {
+    changeDOM(situationR, "Esposa", humorR, "Surtada", imgR, "./assets/images/imgsRochelle/RochelleSurtada.gif", btnChangeR, "dois")
+  } else if (btnChangeR.value == "dois") {
+    changeDOM(situationR, "Modelo", humorR, "Soberba", imgR, "./assets/images/imgsRochelle/modeloRochelle.gif", btnChangeR, "três")
+  } else if (btnChangeR.value == "três") {
+    changeDOM(situationR, "Cozinheira", humorR, "Estressada", imgR, "./assets/images/imgsRochelle/DonadecasaRoche.gif", btnChangeR, "quatro")
+  } else if (btnChangeR.value == "quatro") {
+    changeDOM(situationR, "Motorista", humorR, "Veloz e Furiosa", imgR, "./assets/images/imgsRochelle/RocheleDirigindo.jpg", btnChangeR, "cinco")
+  } else if (btnChangeR.value == "cinco") {
+    changeDOM(situationR, "Irmã Rochele", humorR, "Competitiva", imgR, "./assets/images/imgsRochelle/IrmaRochelle.gif", btnChangeR, "seis")
   } else {
-    changeDOM(situationR, "Mãe", humorR, "Pistola", imgR, "./assets/imagens/Rochelle.gif", botao, "um")
+    changeDOM(situationR, "Mãe", humorR, "Pistola", imgR, "./assets/images/imgsRochelle/Rochelle.gif", btnChangeR, "um")
   }
 });
 
-//julius
+//Julius
 btnChangeJ.addEventListener("click", () => {
     if (btnChangeJ.value == "umJ") {
-    changeDOM(situationJ, "Sozinho em casa", humorJ, "Livre", imgJ, "./assets/img_julius/julius_cantando.gif", btnChangeJ, "doisJ");
+    changeDOM(situationJ, "Sozinho em casa", humorJ, "Livre Dançante", imgJ, "./assets/images/imgsJulius/julius_cantando.gif", btnChangeJ, "doisJ");
   } else if (btnChangeJ.value == "doisJ") {
-    changeDOM(situationJ, "Marido", humorJ, "Sincero", imgJ, "./assets/img_julius/J_sincero.gif", btnChangeJ, "umJ")
+    changeDOM(situationJ, "Chegou a Fatura", humorJ, "  Indignado", imgJ, "./assets/images/imgsJulius/juliusZangado.gif", btnChangeJ, "tresJ")
+  } else if (btnChangeJ.value == "tresJ") {
+    changeDOM(situationJ, "Sobrou Dinheiro", humorJ, "Realizado", imgJ, "./assets/images/imgsJulius/juliusSorrindo.gif", btnChangeJ, "quatroJ");
+  }  else if (btnChangeJ.value == "quatroJ") {
+    changeDOM(situationJ, "Marido Julius", humorJ, "Sincero", imgJ, "./assets/images/imgsJulius/J_sincero.gif", btnChangeJ, "umJ");
   }
 });
+
+//Drew
+btnChangeD.addEventListener("click", () => {
+  if (btnChangeD.value == "umD") {
+    changeDOM(situationD, "Cadê meu dinheiro?", humorD, "Agiota", imgD, "./assets/images/imgsDrew/drewAgiota.jpg", btnChangeD, "doisD")
+  } else if(btnChangeD.value == "doisD") {
+    changeDOM(situationD, "dois", humorD, "Zueiro", imgD, "./assets/images/imgsDrew/drewZueiro.gif", btnChangeD, "tresD")
+  } else if(btnChangeD.value == "tresD") {
+    changeDOM(situationD, "Piadas de natal", humorD, "Morrendo de Rir", imgD, "./assets/images/imgsDrew/drewSorrindo.gif", btnChangeD, "umD")
+  }
+})
+
+//Tonya
+btnChangeT.addEventListener("click", () => {
+  if(btnChangeT.value == "umT"){
+    changeDOM(situationT, "Olhando", humorT, "Debochada", imgT, "./assets/images/imgsTonya/tonya.jpg", btnChangeT, "doisT")
+  } else if(btnChangeT.value == "doisT") {
+    changeDOM(situationT, "teste2", humorT, "Debochada", imgT, "./assets/images/imgsTonya/tonyaNao.gif", btnChangeT, "tresT")
+  } else if (btnChangeT.value == "tresT") {
+    changeDOM(situationT, "teste3", humorT, "Debochada", imgT, "./assets/images/imgsTonya/tonyaEnxaqueca.gif", btnChangeT, "quatroT")
+  } else if(btnChangeT.value == "quatroT") {
+    changeDOM(situationT, "teste4", humorT, "Debochada", imgT, "./assets/images/imgsTonya/tonyaRe.gif", btnChangeT, "umT")
+  } else if(btnChangeT.value == "umT") {
+    changeDOM(situationT, "", humorT, "", imgT, "./assets/images/imgsTonya/tonya.jpg", btnChangeT, "umT")
+  }
+})
+
 
