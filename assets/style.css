@@ -156,7 +156,7 @@ header {
 .section_main {
   width: 500px;
   height: 300px;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -214,22 +214,27 @@ p {
 
 .jogo_chris {
   background-color: #8c9e06;
+  display: none;
 }
 
 .jogo_rochelle {
   background-color: #800080;
+  display: none;
 }
 
 .jogo_julius {
   background-color: #059e97;
+  display: none;
 }
 
 .jogo_drew {
   background-color: #70b600;
+  display: none;
 }
 
 .jogo_tonya {
   background-color: #96084f;
+  display: none;
 }
 
 footer {
