@@ -76,7 +76,7 @@ function changeName_Back(name, colorB) {
 
 btnSerie.addEventListener("click", () => {
   changeDisplay(presentation, "flex");
-  changeName_Back("Todo Mundo Odeia o Chris", "#C4DD68");
+  changeName_Back("Todo Mundo Odeia o Chris", "linear-gradient(rgb(197, 200, 45), rgb(207, 217, 25), rgb(197, 200, 45)");
   changeDisplay(sectionChris, "none");
   changeDisplay(sectionRochelle, "none");
   changeDisplay(sectionJulius, "none");

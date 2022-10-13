@@ -21,25 +21,25 @@ main {
 }
 
 header {
-  height: 6.5rem;
+  height: 8rem;
   width: 100%;
   background-image: linear-gradient(#2770d7, #3478d6, #2770d7);
 }
 
 .btn_serie {
   background-color: transparent;
-  margin-left: 1rem;
   border: none;
   cursor: pointer;
 }
 
-.btn_serie:hover{
+.btn_serie:hover {
   background-color: #00000015;
-  transition: ease all .9s;
+  transition: ease all 0.9s;
 }
 
 .btn_serie > img {
-  width: 180px;
+  width: 200px;
+  margin-left: 1rem;
 }
 
 .hamburguer {
@@ -61,16 +61,16 @@ header {
 
 .line {
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   padding: 1px;
   border-radius: 10px;
   background-color: rgb(212, 255, 0);
-  box-shadow: .1rem .1rem 3px rgba(0, 0, 0, 0.788);
-  transition: transform .7s;
+  box-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.788);
+  transition: transform 0.7s;
 }
 
 .show_menu #line-1 {
-  transform: rotate(45deg) translate(.4rem, .9rem);
+  transform: rotate(45deg) translate(0.4rem, 0.9rem);
   background-color: rgb(244, 49, 49);
   box-shadow: none;
 }
@@ -81,7 +81,7 @@ header {
 }
 
 .show_menu #line-3 {
-  transform: rotate(-45deg) translate(.4rem, -.9rem);
+  transform: rotate(-45deg) translate(0.4rem, -0.9rem);
   background-color: rgb(244, 49, 49);
   box-shadow: none;
 }
@@ -89,12 +89,15 @@ header {
 .sidebar {
   width: 17.5rem;
   height: 100vh;
-  background-color: linear-gradient(329.45deg, #111111 0%, #222222 100%);
-  box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, .582);
+  background-image: linear-gradient(
+    rgba(29, 29, 29, 0.524),
+    rgba(23, 23, 23, 0.501)
+  );
+  box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
   position: fixed;
   top: 0;
   right: -20rem;
-  transition: all .8s;
+  transition: all 0.8s;
 }
 
 .menu {
@@ -107,14 +110,14 @@ header {
 
 .menu_item {
   text-align: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu_link {
   width: 8.5rem;
   font-size: 2rem;
-  transition: color .7s;
-  background-color: #0000002d;
+  transition: color 0.7s;
+  background-color: #9eb919be;
   color: rgb(208, 208, 208);
   font-weight: 500;
   padding: 0.5rem;
@@ -122,19 +125,23 @@ header {
   border: none;
   box-shadow: 1px 2px 3px 1px #00000020;
   cursor: pointer;
-  transition: ease-in-out .9s;
+  transition: ease-in-out 0.9s;
 }
 
 .menu_link:hover {
-  color:#276ed2;
-  background-color: #00000045;
+  color: #9eb919be;
+  background-color: rgb(208, 208, 208);
 }
 
 .background_all {
   width: auto;
   height: auto;
-  padding: 6rem 0;
-  background-color: #C4DD68;
+  padding: 4rem 0 13rem 0;
+  background-image: linear-gradient(
+    rgb(197, 200, 45),
+    rgb(207, 217, 25),
+    rgb(197, 200, 45)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,15 +151,24 @@ header {
 .first_page {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.image_main{
-  width: 100%;
-}
-
-.img_serie{
+.img_serie {
   width: 500px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 2px #595959;
+  margin: 2rem 0;
 }
+
+.text_description > p {
+  margin-top: 2rem;
+  color: #111111;
+  width: 600px;
+}
+
 .section_main {
   width: 500px;
   height: 300px;
@@ -166,7 +182,7 @@ header {
 
 h1,
 #name_character {
-  color:rgb(55, 55, 55);
+  color: rgb(55, 55, 55);
   font-style: oblique;
   margin-bottom: 1.5rem;
 }
@@ -239,25 +255,34 @@ p {
 
 footer {
   width: 100%;
-  height: 6rem;
+  height: 9rem;
   text-align: center;
-  color:rgb(217, 220, 43);
-  background-image: linear-gradient(#2770d7, #276ed2, #2770d7);
+  color: rgb(191, 194, 40);
+  background-image: linear-gradient(#2770d7, #3478d6, #2770d7);
 }
 
 .text_footer {
-  margin-top: 2rem;;
+  margin-top: 3rem;
 }
+
 a {
   text-decoration: none;
   color: rgb(217, 220, 43);
 }
 
-a:hover{
+a:hover {
   color: white;
 }
 
 @media (max-width: 650px) {
+  .img_serie {
+    width: 310px;
+    box-shadow: 1px 1px 5px 1px #595959;
+  }
+
+  .text_description > p {
+    width: 320px;
+  }
   .section_main {
     width: 300px;
     height: 320px;
@@ -267,7 +292,7 @@ a:hover{
 
   h1,
   #name_character {
-    font-size:large;
+    font-size: medium;
   }
 
   .images {
@@ -281,12 +306,26 @@ a:hover{
   }
 
   .textual_content {
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     height: 120px;
   }
 }
 
 @media (max-width: 350px) {
+  h1,
+  #name_character {
+    font-size: small;
+  }
+
+  .img_serie {
+    width: 200px;
+    margin: 1rem 0;
+  }
+
+  .text_description > p {
+    width: 225px;
+  }
+
   .section_main {
     width: calc(100% - 50px);
     padding: 1rem 0;
@@ -298,5 +337,4 @@ a:hover{
     width: 200px;
     height: auto;
   }
-
 }
